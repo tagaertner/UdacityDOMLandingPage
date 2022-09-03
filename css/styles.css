@@ -9,6 +9,9 @@
 */
 
 /* ---- Base Rules ---- */
+* {
+  box-sizing: border-box;
+}
 body {
   background: rgb(136, 203, 171);
   background: linear-gradient(0deg, rgba(136, 203, 171, 1) 0%, rgba(0, 13, 60, 1) 100%);
@@ -204,10 +207,6 @@ section.your-active-class .landing__container::after {
   opacity: 1;
   animation: rotate 5s linear 0s infinite forwards reverse;
 }
-/* from W38 */
-* {
-  box-sizing: border-box;
-}
 input[type="text"],
 input[type="password"] {
   width: 100%;
@@ -217,20 +216,12 @@ input[type="password"] {
   border: none;
   background: #f1f1f1;
 }
-
 input[type="text"]:focus,
 input[type="password"]:focus,
 input[type="submit"] :focus {
   background-color: #ddd;
   outline: none;
 }
-
-/* hr {
-  border: 1px solid #f1f1f1;
-  margin-bottom: 25px;
-} */
-
-/* Set a style for all buttons */
 button {
   background-color: #0452aa;
   color: white;
@@ -267,24 +258,19 @@ button:hover {
   background-color: rgba(136, 203, 171, 1);
   box-shadow: 4px 7px 15px 1px;
 }
-
-/* Float cancel and signup buttons and add an equal width */
-
 .submittbtn {
   float: left;
   width: 50%;
 }
-
-/* Add padding to container elements */
 .container {
   padding: 16px;
 }
-
-/* Change styles for cancel button and signup button on extra small screens */
-@media screen and (max-width: 300px) {
-  .cancelbtn,
-  .signupbtn {
+@media screen and (max-width: 340px) {
+  .submitbtn,
+  .done,
+  #form {
     width: 100%;
+    flex: auto;
   }
 }
 /* Section Active Styles Keyframe Animations */

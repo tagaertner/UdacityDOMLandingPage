@@ -82,15 +82,12 @@ function activeButton() {
     }
   }
 }
-
 // Scroll to anchor ID using scrollTO event
 function scroll() {
   const navbar = document.querySelectorAll(".menu__link");
   for (let i = 0; i < navbar.length; i++) {
-    // console.warn(navbar[i]);
     navbar[i].addEventListener("click", function (e) {
       e.preventDefault();
-
       const target = e.target;
       const box = document.querySelector(target.getAttribute("href")).getBoundingClientRect();
       scrollBy({
