@@ -30,6 +30,16 @@ const sections = document.querySelectorAll("[data-nav]");
  * Start Helper Functions
  *
  */
+const form = document.querySelector("#form");
+console.log(form);
+const complete = document.querySelector(".done");
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  complete.style.display = "block";
+  setTimeout(() => {
+    complete.style.display = "none";
+  }, 6000);
+});
 
 /**
  * End Helper Functions
@@ -49,7 +59,6 @@ function navmenu() {
     aEL.innerHTML = link;
     liEL.append(aEL);
     navagation.appendChild(liEL);
-    console.log(liEL);
     // Add class 'active' to section when near top of viewport
     aEL.addEventListener("click", () => {
       ulEl.querySelectorAll("a").forEach((a) => {
@@ -64,16 +73,11 @@ function navmenu() {
 function activeButton() {
   for (let section of sections) {
     let box = section.getBoundingClientRect();
-    //Find a value that works best, but 150 seems to be a good start.
     if (box.top <= 150 && box.bottom >= 150) {
-      //apply active state on current section and corresponding Nav link
       let navLink = document.querySelector(`[href="#${section.id}"]`);
-
       navLink.classList.add("active");
     } else {
-      //Remove active state from other section and corresponding Nav link
       let navLink = document.querySelector(`[href="#${section.id}"]`);
-
       navLink.classList.remove("active");
     }
   }
@@ -82,7 +86,6 @@ function activeButton() {
 // Scroll to anchor ID using scrollTO event
 function scroll() {
   const navbar = document.querySelectorAll(".menu__link");
-  console.log(navbar);
   for (let i = 0; i < navbar.length; i++) {
     // console.warn(navbar[i]);
     navbar[i].addEventListener("click", function (e) {
@@ -103,18 +106,20 @@ function scroll() {
  *
  */
 
-// Build menu
+// Build menu example to work on
+
+// line break for the form menu
 document.addEventListener("DOMContentLoaded", (e) => {
   e.preventDefault();
   console.log("Dom loaded");
   navmenu();
 });
 // Scroll to section on link click
-// document.addEventListener("click", (e)=
-// Set sections as active
 document.addEventListener("click", (e) => {
   scroll();
 });
+// Set sections as active
+
 document.addEventListener("scroll", (e) => {
   activeButton();
 });

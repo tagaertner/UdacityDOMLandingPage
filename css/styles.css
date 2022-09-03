@@ -204,7 +204,89 @@ section.your-active-class .landing__container::after {
   opacity: 1;
   animation: rotate 5s linear 0s infinite forwards reverse;
 }
+/* from W38 */
+* {
+  box-sizing: border-box;
+}
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
 
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="submit"] :focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+} */
+
+/* Set a style for all buttons */
+button {
+  background-color: #0452aa;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+#contact {
+  position: relative;
+}
+.done {
+  border: 10px solid rgb(199, 214, 205);
+  background-color: #0452aa;
+  height: 450px;
+  width: 450px;
+  z-index: 12;
+  position: absolute;
+  top: 200px;
+  left: 200px;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 30px;
+  display: none;
+}
+button:hover {
+  opacity: 1;
+  background-color: rgba(136, 203, 171, 1);
+  box-shadow: 4px 7px 15px 1px;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+
+.submittbtn {
+  float: left;
+  width: 50%;
+}
+
+/* Add padding to container elements */
+.container {
+  padding: 16px;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn,
+  .signupbtn {
+    width: 100%;
+  }
+}
 /* Section Active Styles Keyframe Animations */
 @keyframes rotate {
   from {

@@ -108,12 +108,42 @@
         </div>
       </section>
       <section id="contact" data-nav="Contact">
-        <form>
+        <div class="done">
+          <h2> Thanks for submiting your form</h2>
+          <p> We will be in touch shortly</p>
+        </div>
           <div class="landing__container">
-            <h2>contact</h2>
-            <!-- the form for subscribe -->
+          <form id="form">
+              <h2>contact</h2>
+              <h3><strong>Please fill out the information below</strong></h3>
+        <hr>
+            <div class="form-field">
+              <label for="name"> Name</label>
+           <input type="text" id="name" name="name" required>
+           </div>
+
+          <div class="form-field">
+               <label for="username">Username</label>
+              <input type="text" name="username" id="username" required>
+            </div>
+
+          <div class="form-field ">
+          <label for="email"><b>Email</b></label>
+          <input type="text" name="email" required>
           </div>
-        </form>
+
+          <div class="form-field">
+          <label for="password"><b>Password</b></label>
+          <input type="password" name="password" id="password" required>
+          </div>
+
+          <div class="form-field">
+         <button class ="submit">Submit</button>
+          </div>
+      </div>
+    </div>
+  </form>
+          </div>
       </section>
     </main>
     <footer class="page__footer">
