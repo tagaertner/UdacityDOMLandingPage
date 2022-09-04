@@ -68,9 +68,11 @@ function activeButton() {
     if (box.top <= 150 && box.bottom >= 150) {
       let navLink = document.querySelector(`[href="#${section.id}"]`);
       navLink.classList.add("active");
+      section.classList.add("your-active-class");
     } else {
       let navLink = document.querySelector(`[href="#${section.id}"]`);
       navLink.classList.remove("active");
+      section.classList.remove("your-active-class");
     }
   }
 }
