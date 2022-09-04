@@ -267,12 +267,19 @@ button:hover {
 }
 @media screen and (max-width: 340px) {
   .submitbtn,
-  .done,
   #form {
     width: 100%;
     flex: auto;
   }
+  .done {
+    width: 300px;
+    z-index: 5;
+    position: absolute;
+    top: 150px;
+    left: 5px;
+  }
 }
+
 /* Section Active Styles Keyframe Animations */
 @keyframes rotate {
   from {

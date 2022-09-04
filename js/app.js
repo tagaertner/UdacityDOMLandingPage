@@ -30,8 +30,8 @@ const sections = document.querySelectorAll("[data-nav]");
  * Start Helper Functions
  *
  */
+//pop up window for the submit button verifiying that we recieved their information
 const form = document.querySelector("#form");
-console.log(form);
 const complete = document.querySelector(".done");
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -59,15 +59,7 @@ function navmenu() {
     aEL.innerHTML = link;
     liEL.append(aEL);
     navagation.appendChild(liEL);
-    // Add class 'active' to section when near top of viewport
-    aEL.addEventListener("click", () => {
-      ulEl.querySelectorAll("a").forEach((a) => {
-        a.classList.remove("active");
-      });
-      aEL.classList.add("active");
-    });
   }
-  return ulEl;
 }
 
 function activeButton() {
@@ -91,7 +83,7 @@ function scroll() {
       const target = e.target;
       const box = document.querySelector(target.getAttribute("href")).getBoundingClientRect();
       scrollBy({
-        top: box.top - 180,
+        top: box.top,
         behavior: "smooth",
       });
     });
