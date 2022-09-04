@@ -207,6 +207,7 @@ section.your-active-class .landing__container::after {
   opacity: 1;
   animation: rotate 5s linear 0s infinite forwards reverse;
 }
+
 input[type="text"],
 input[type="password"] {
   width: 100%;
@@ -216,12 +217,14 @@ input[type="password"] {
   border: none;
   background: #f1f1f1;
 }
+
 input[type="text"]:focus,
 input[type="password"]:focus,
 input[type="submit"] :focus {
   background-color: #ddd;
   outline: none;
 }
+
 button {
   background-color: #0452aa;
   color: white;
@@ -233,9 +236,11 @@ button {
   width: 100%;
   opacity: 0.9;
 }
+
 #contact {
   position: relative;
 }
+
 .done {
   border: 10px solid rgb(199, 214, 205);
   background-color: #0452aa;
@@ -253,18 +258,22 @@ button {
   padding: 0 30px;
   display: none;
 }
+
 button:hover {
   opacity: 1;
   background-color: rgba(136, 203, 171, 1);
   box-shadow: 4px 7px 15px 1px;
 }
+
 .submittbtn {
   float: left;
   width: 50%;
 }
+
 .container {
   padding: 16px;
 }
+
 @media screen and (max-width: 340px) {
   .submitbtn,
   #form {
